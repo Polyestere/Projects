@@ -1,0 +1,244 @@
+body {
+    font-family: 'Roboto', sans-serif;
+    background-color: #ffffff;
+    background-image: url(https://lwi.nexon.com/maplestory/common/media/artwork/artwork_120.jpg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    color: #333;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    
+}
+
+h1 {
+    font-size: 5rem;
+    color: #000000;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
+    margin-bottom: 20px;
+}
+
+
+#search-section {
+    display: flex;
+    align-items: center;
+    gap: 10px;  /* 요소 간 간격 설정 */
+    margin-right: 30px;  /* 오른쪽 마진 설정 */
+}
+
+#search-section input[type="text"],
+#search-section input[type="date"] {
+    margin-top: 18px;
+    padding: 5px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+#search-section button {
+    display: inline-block; 
+    writing-mode: horizontal-tb; 
+    white-space: nowrap; 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px 20px; 
+    font-size: 16px; 
+    color: #000000; 
+    background-color: #797a79; 
+    border: none;
+    border-radius: 5px; 
+    cursor: pointer; 
+    margin-top: 2px; 
+    height: 32px;
+}
+
+#search-section button:hover {
+    background-color: #2980b9;
+    color: #fff;
+  
+}
+#character-name, #search-date {
+    padding: 10px;
+    width: 80%;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    font-size: 16px;
+}
+
+search-button {
+    padding: 10px 20px;
+    background-color: #000000;
+    color: white;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s ease;
+}
+
+search-button:hover {
+    background-color: #2980b9;
+}
+
+#character-info {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #ffffff;
+    color: #333;
+    border-radius: 15px;
+    padding: 20px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    width: 60%;
+    max-width: 800px;
+    max-height: 800vh;
+    overflow-y: hidden;
+    z-index: 1000;
+    opacity: 1;
+    visibility: visible;
+    display: block;
+    transition: opacity 0.3s ease, visibility 0.3s ease;
+    will-change: transform, opacity; /* 렌더링 최적화 */
+    
+}
+
+#character-info.hidden {
+    opacity: 0; /* 투명하게 설정 */
+    visibility: hidden; /* 숨기기 */
+    transform: translate(-50%, -50%); /* 위치 고정 */
+}
+close-button {
+    
+    position: absolute;
+    top: 35px;
+    right: 40px;
+    padding: 10px 20px;
+    background-color: #000000;
+    color: white;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s ease;
+}
+
+close-button:hover {
+    background-color: #2980b9; /* 호버 시 색상만 진하게 */
+}
+
+
+
+
+.character-content {
+    display: flex;
+    align-items: flex-start;
+    gap: 20px;
+    flex-direction: row-reverse;
+    overflow: hidden;
+}
+
+.character-detail {
+    flex: 1;
+    padding-right: 20px;
+  
+}
+
+.image-container {
+    flex-shrink: 0;
+    max-width: 300px;
+  
+}
+
+#character_image {
+    
+    display: block;
+    max-width: 100%;
+    height: 300px;
+    max-height: 300px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.character-info-popup {
+    position: absolute;/* 드래그 위치에 따라 이동 가능 */
+    font-size: 16px;
+    font-style: bolder;
+    background-color: #ffffff !important; /* 흰색 배경 */
+    color: #333; /* 텍스트 색상 */
+    border: 1px solid #ccc; /* 팝업 경계 표시 */
+    border-radius: 25px;
+    padding: 20px 20px 20px 40px; /* 좌측 패딩을 더 주어 닫기 버튼과 여유 확보 */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    width: 600px; /* 기본 너비를 80%로 설정 */
+    max-width: 600px; /* 최대 너비를 800px로 설정 */
+
+
+    max-height: 420px; /* 최대 높이를 화면 높이의 80%로 설정 */
+    height: auto; /* 내용에 따라 높이를 자동 조정 */
+    overflow:hidden; /* 팝업 경계 안에서 콘텐츠 제한 */
+    z-index: 1000;
+    opacity: 1; /* 투명도 제거 */
+    visibility: visible; /* 보이도록 설정 */
+    display: block;
+    transition: opacity 0.3s ease, visibility 0.3s ease;
+    line-height: 1;
+    white-space: nowrap;
+    overflow-y: hidden;
+    box-sizing: border-box;
+}
+#character-info-popup p {
+    white-space: nowrap; /* 텍스트가 한 줄로 나가도록 설정 */
+}
+html, body {
+    margin: 0;
+    padding: 0;
+    height: 100%;             /* 전체 높이를 뷰포트에 맞춤 */
+    display: flex;
+    flex-direction: column;
+}
+
+body {
+  /* 최소 높이를 뷰포트 높이로 설정 */
+    box-sizing: border-box;   /* 패딩과 보더를 포함한 전체 크기 계산 */
+}
+
+footer {
+    text-align: center;
+    padding: 15px 20px;
+    background-color: #111;   /* 짙은 배경 */
+    color: #ccc;              /* 연한 회색 텍스트 */
+    font-size: 14px;          /* 폰트 크기 축소 */
+    width: 100%;              /* 전체 너비 */
+    margin-top: auto;         /* 남은 공간을 모두 밀어내어 하단 고정 */
+}
+
+/* 상단 바 스타일 */
+#header-bar {
+    background-color: #000; /* 검은색 배경 */
+    color: #fff; /* 흰색 텍스트 */
+    padding: 10px 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 100;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.5);
+}
+
+/* 로고 스타일 */
+#logo {
+    margin: 0;
+    font-size: 1.5rem;
+    font-weight: bold;
+    cursor: pointer;
+    color: #fff;
+}

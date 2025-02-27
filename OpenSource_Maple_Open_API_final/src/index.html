@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="UTF-8">
+  <title>팝업 크기조절 추가</title>
+  <link rel="stylesheet" href="./style.css">
+
+</head>
+<body>
+<!-- partial:index.partial.html -->
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="UTF-8">
+  <title>팝업 생성시 겹치지않게, 클릭시 맨위로, 닫기버튼 위치조정, 로고및 검색위치 변경 통합본</title>
+  <link rel="stylesheet" href="./style.css">
+
+</head>
+<body>
+<!-- partial:index.partial.html -->
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>메이플스토리 캐릭터 검색</title>
+    <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+    <div id="header-bar">
+        <h1 id="logo">메이플서치</h1>
+        <div id="search-section">
+            <input type="date" id="search-date">
+            <input type="text" id="character-name" placeholder="캐릭터 이름">
+            <button onclick="searchCharacter()">검색</button>
+        </div>
+    </div>
+    
+    <div id="content"></div>
+    
+    <div id="character-info" style="display:none;">
+        <button id="close-btn" onclick="closeCharacterInfo()">X</button>
+
+        <div class="character-content">
+            <div class="character-detail">
+                <p>이름: <span id="character_name"></span></p>
+                <p>레벨: <span id="character_level"></span></p>
+                <p>경험치: <span id="character_exp_rate"></span></p>
+                <p>월드: <span id="world_name"></span></p>
+                <p>성별: <span id="character_gender"></span></p>
+                <p>직업: <span id="character_class"></span></p>
+                <p>길드: <span id="character_guild_name"></span></p>
+            </div>
+
+            <div class="image-container">
+                <img id="character_image" src="" alt="캐릭터 이미지">
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer Section -->
+    <footer>
+        <p>&copy; 2024 메이플서치. All rights reserved.</p>
+        <p>Data based on NEXON Open API</p>
+    </footer>
+
+    <script src="./script.js"></script>
+</body>
+</html>
+<!-- partial -->
+  <script  src="./script.js"></script>
+
+</body>
+</html>
+<!-- partial -->
+  <script  src="./script.js"></script>
+
+</body>
+</html>
